@@ -2,7 +2,8 @@
 def fizzbuzz():
     for i in range(1, 100):
         if i % 3 == 0:
-            print("fizz")
+            print("Fizz", end = " ")
             if i % 5 == 0:
-                print("buzz")
-fizzbuzz()
+                print("Buzz", end = " ")
+            else:
+                print(i, end = " ")
