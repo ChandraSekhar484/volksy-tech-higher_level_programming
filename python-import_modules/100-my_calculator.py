@@ -22,5 +22,7 @@ def main():
         print('{} * {} = {}'.format(a, b, mul(a, b)))
     elif argv[2] == '/':
         print('{} / {} = {}'.format(a, b, div(a, b)))
-if __name__ == "__main__":
+  
+
+  if __name__ == "__main__":
     main()
