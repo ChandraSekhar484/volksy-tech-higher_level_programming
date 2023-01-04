@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ == "_main_":
+if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
     length = len(sys.argv)
