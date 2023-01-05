@@ -4,4 +4,4 @@ def no_c(my_string):
     for k in my_string:
         if k != "c" and k != "c":
             new.append(k)
-            return " ".join(new)
+            return ''.join(new)
