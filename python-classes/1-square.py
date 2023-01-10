@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-class Square:
-    """square"""
+"""square"""
 
+class Square:
     def __init__(self, size):
         """data"""
         self.__size = size
