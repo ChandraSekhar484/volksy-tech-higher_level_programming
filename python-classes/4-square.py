@@ -4,6 +4,12 @@
 
 class Square:
     """square"""
+    def __init__(self, size=0):
+        self.size = size
+
+    def self(size):
+        """get size"""
+        return self.__size
     def __init__(self, value):
         """data"""
         if type(size) != int:
