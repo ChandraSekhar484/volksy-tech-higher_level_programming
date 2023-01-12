@@ -36,4 +36,4 @@ def matrix_divided(matrix, div):
         for col in range(len(matrix[0])):
             new[row][col] = round(matrix[row][col] / div, 2)
 
-    return 
+    return new 
