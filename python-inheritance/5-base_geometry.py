@@ -3,5 +3,6 @@
 
 
 class BaseGeometry:
-    """base geometry"""
-    return dir(BaseGeometry)
+    """base geometry
+    of class"""
+    return dir(BG)
