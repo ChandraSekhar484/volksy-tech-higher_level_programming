@@ -5,4 +5,4 @@
 class BaseGeometry:
     """base geometry
     of class"""
-    return dir(BG)
+    pass
