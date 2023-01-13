@@ -20,4 +20,4 @@ class Square(Rectangle):
     def __str__(self):
         """string representation of Square"""
         str_rep = "[Square] " + str(self.__size) + "/" + str(self.__size)
-        return str_rep 
+        return str_rep
