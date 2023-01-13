@@ -1,23 +1,63 @@
 #!/usr/bin/python3
-"""defines class Square that inherits from Rectangle"""
+"""
+This is the BaseGeometry module.
+The BaseGeometry module contains two functions, area() and integer_validator().
+"""
 
 
-Rectangle = __import__('8-rectangle').Rectangle
+class BaseGeometry:
+    """Represents a BaseGeometry."""
+
+    def area(self):
+        """Raise an exception."""
+        raise Exception('area() is not implemented')
+
+    def integer_validator(self, name, value):
+        """Validate value."""
+        if type(value) != int:
+            raise TypeError('{} must be an integer'.format(name))
+        if value <= 0:
+            raise ValueError('{} must be greater than 0'.format(name))
+
+"""
+This is the Rectangle module.
+The Rectangle module defines the Rectangle class.
+"""
+
+
+class Rectangle(BaseGeometry):
+    """Represents a Rectangle."""
+    def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+
+    def __repr__(self):
+        """Print the width and height of the rectangle."""
+        return '[Rectangle] ' + str(self.__width) + '/' + str(self.__height)
+
+    def area(self):
+        """Return the area of the rectangle."""
+        return self.__width * self.__height
+
+"""
+This is the Square module.
+The Square module defines the Square class.
+"""
 
 
 class Square(Rectangle):
-    """class for square that inherits from Rectangle
-    with method for area and string representation"""
+    """Represents a Square."""
     def __init__(self, size):
-        """initializes Square instance"""
         self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
+
+    def __repr__(self):
+        """Print the width and height of the square."""
+        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
 
     def area(self):
-        """returns area of square"""
-        return (self.__size * self.__size)
-
-    def __str__(self):
-        """string representation of Square"""
-        str_rep = "[Square] " + str(self.__size) + "/" + str(self.__size)
-        return str_rep
+        """Return the area of the square."""
+        return self.__size ** 2
