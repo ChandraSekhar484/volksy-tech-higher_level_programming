@@ -5,4 +5,4 @@
 def lookup(obj):
     """here i used dir function
     it returns all members of the module"""
-    return  dir(obj)
+    return dir(obj)
