@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-class Rectangle:
     """Represents a rectangle."""
+
+    class Rectangle:
+        """Rectangle"""
     def __init__(self, width=0, height=0):
         """Initialize the data."""
         self.width = width
