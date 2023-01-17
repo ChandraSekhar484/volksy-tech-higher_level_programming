@@ -3,11 +3,6 @@
 
 
 class Rectangle:
-#!/usr/bin/python3
-"""creates class Rectangle"""
-
-
-class Rectangle:
     """defines class Rectangle with private instance attributes width/height
 and public instance methods to return the rectangle area and primeter
 and can print the rectangle using '#' with print() or str()
