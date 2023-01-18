@@ -4,5 +4,8 @@
 
 def write_file(filename="", text=""):
     """writing_file function"""
-    with open(filename, encoding="utf-8") as f:
-        print(f.write(), end="")
+     lines = 0
+    with open(filename) as f:
+        for line in f:
+            lines += 1
+    return lines
