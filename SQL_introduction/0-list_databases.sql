@@ -1,2 +1,2 @@
--- thius comand will display all databases
+-- this comand will display all databases
 SHOW DATABASES;
