@@ -1,2 +1,2 @@
---thius comand will display all databases
+-- thius comand will display all databases
 SHOW DATABASES;
