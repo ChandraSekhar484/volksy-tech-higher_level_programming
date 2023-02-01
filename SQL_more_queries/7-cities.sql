@@ -1,0 +1,3 @@
+-- creating dtabase hbtn_0d_usa and table cities
+CREATE DATABASE IF ALREADY EXISTS hbtn_0d_usa;
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities(id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,states_id INT NOT NULL FOREIGN KEY REFERENCES(id),name VRACHAR(256));
