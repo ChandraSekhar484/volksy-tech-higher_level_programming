@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-lists all states from the database in ascending order
-where name of state matches argument given using MySQLdb
+lists all cities from the database in ascending order
+with state name using MySQLdb
 """
 if __name__ == "__main__":
     from sys import argv
@@ -9,8 +9,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("""SELECT id, name FROM states WHERE name = %(name)s \
-                ORDER BY cities.id""", {'name': argv[4]})
+    cur.execute("""SELECT c.id, c.name, s.name FROM cities AS c \
+                INNER JOIN states AS s ON c.state_id = s.id \
+                ORDER BY c.id ASC""")
     rows = cur.fetchall()
     for row in rows:
         print(row)
