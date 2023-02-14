@@ -17,7 +17,7 @@ if __name__ == "__main__":
         session = Session()
         instance = session.query(State).first()
         if instance is not None:
-            print("{}: {}".format(instance.id, instance.name))
+                print("{}: {}".format(instance.id, instance.name))
         else:
-            print("Nothing")
+                print("Nothing")
         session.close()
