@@ -1,2 +1,1 @@
-javascript_objects_scopes_closures
-it defines a rectangle
+hello
